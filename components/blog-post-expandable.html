@@ -1,0 +1,108 @@
+<div>
+  <script
+    type="text/javascript"
+    src="https://unpkg.com/dangerous-html@0.1.12/dist/default/lib.umd.js"
+  ></script>
+  <link href="./blog-post-expandable.css" rel="stylesheet" />
+  <div class="blog-post-expandable-blog-post-card">
+    <img
+      alt="image"
+      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDd8fHBvcnRyYWl0fGVufDB8fHx8MTYyNjM3ODk3Mg&ixlib=rb-1.2.1&w=400"
+      image_src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDd8fHBvcnRyYWl0fGVufDB8fHx8MTYyNjM3ODk3Mg&amp;ixlib=rb-1.2.1&amp;h=1000"
+      class="blog-post-expandable-image"
+    />
+    <div class="blog-post-expandable-container">
+      <div class="blog-post-expandable-container1">
+        <span class="blog-post-expandable-text"><span>3 days ago</span></span>
+      </div>
+      <div class="blog-post-expandable-container2">
+        <span class="blog-post-expandable-text1">Read More -&gt;</span>
+      </div>
+      <span class="blog-post-expandable-text2">Read more</span>
+      <div
+        data-role="accordion-container"
+        class="blog-post-expandable-element accordion-element"
+      >
+        <h1 class="blog-post-expandable-text3"><span>Title</span></h1>
+        <span class="blog-post-expandable-text4"><span>Tagline</span></span>
+        <div class="blog-post-expandable-profile">
+          <img
+            alt="profile"
+            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDd8fHBvcnRyYWl0fGVufDB8fHx8MTYyNjM3ODk3Mg&ixlib=rb-1.2.1&w=200"
+            class="blog-post-expandable-image1"
+          />
+          <span class="blog-post-expandable-text5"><span>Jane Doe</span></span>
+        </div>
+        <div class="blog-post-expandable-details">
+          <span
+            data-role="accordion-content"
+            class="blog-post-expandable-text6"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Molestie
+            a iaculis at erat pellentesque adipiscing commodo elit at. Non diam
+            phasellus vestibulum lorem sed risus ultricies tristique. Etiam sit
+            amet nisl purus. Ornare quam viverra orci sagittis eu.
+          </span>
+        </div>
+        <svg
+          viewBox="0 0 1024 1024"
+          data-role="accordion-icon"
+          class="blog-post-expandable-icon"
+        >
+          <path d="M366 708l196-196-196-196 60-60 256 256-256 256z"></path>
+        </svg>
+      </div>
+      <div>
+        <dangerous-html
+          html="<script>
+  /*
+  Accordion - Code Embed
+  */
+
+  const accordionContainers = document.querySelectorAll('[data-role='accordion-container']'); // All accordion containers
+  const accordionContents = document.querySelectorAll('[data-role='accordion-content']'); // All accordion content
+  const accordionIcons = document.querySelectorAll('[data-role='accordion-icon']'); // All accordion icons
+
+  accordionContents.forEach((accordionContent) => {
+      accordionContent.style.display = 'none'; //Hides all accordion contents
+  });
+
+  accordionContainers.forEach((accordionContainer, index) => {
+      accordionContainer.addEventListener('click', () => {
+          accordionContents.forEach((accordionContent) => {
+              accordionContent.style.display = 'none'; //Hides all accordion contents
+          });
+
+          accordionIcons.forEach((accordionIcon) => {
+              accordionIcon.style.transform = 'rotate(0deg)'; // Resets all icon transforms to 0deg (default)
+          });
+
+          accordionContents[index].style.display = 'flex'; // Shows accordion content
+          accordionIcons[index].style.transform = 'rotate(180deg)'; // Rotates accordion icon 180deg
+      });
+  });
+
+  /*
+  Here's what the above is doing:
+      1. Selects all accordion containers, contents, and icons
+      2. Hides all accordion contents
+      3. Adds an event listener to each accordion container
+      4. When an accordion container is clicked, it:
+          - Hides all accordion contents
+          - Resets all icon transforms to 0deg (default)
+          - Checks if this container has class 'accordion-open'
+              - If it does, it removes class 'accordion-open'
+              - If it doesn't, it:
+                  - Removes class 'accordion-open' from all containers
+                  - Adds class 'accordion-open' to this container
+                  - Shows accordion content
+                  - Rotates accordion icon 180deg
+  */
+</script>
+"
+        ></dangerous-html>
+      </div>
+    </div>
+  </div>
+</div>

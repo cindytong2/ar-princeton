@@ -1,17 +1,11 @@
 {
-  "name": "teleport-project-react",
-  "version": "0.0.0",
-  "scripts": {
-    "build": "vite build",
-    "preview": "vite preview",
-    "dev": "vite"
+  "name": "ar-princeton",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "parcel-bundler": "^1.6.1",
+    "dangerous-html": "0.1.12"
   },
-  "devDependencies": {
-    "autoprefixer": "^9.8.6",
-    "postcss": "^8.2.15",
-    "tailwindcss": "^3.0.24",
-    "typescript": "^4.4.4",
-    "vite": "^4.1.1",
-    "vite-plugin-jspm": "^0.2.0"
-  }
+  "scripts": {},
+  "devDependencies": {}
 }
