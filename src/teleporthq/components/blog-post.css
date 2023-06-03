@@ -1,0 +1,88 @@
+.blog-post-blog-post-card {
+  width: auto;
+  display: flex;
+  max-width: var(--dl-size-size-maxwidth);
+  box-shadow: 4px 4px 10px 0px rgba(18, 18, 18, 0.1);
+  transition: 0.3s;
+  align-items: stretch;
+  border-radius: 50%;
+  flex-direction: row;
+}
+.blog-post-blog-post-card:hover {
+  transform: scale(1.02);
+}
+.blog-post-image {
+  width: 350px;
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 0px;
+  border-top-left-radius: var(--dl-radius-radius-radius8);
+  border-bottom-left-radius: var(--dl-radius-radius-radius8);
+}
+.blog-post-container {
+  display: flex;
+  align-items: flex-start;
+  padding-top: var(--dl-space-space-twounits);
+  padding-left: var(--dl-space-space-twounits);
+  padding-right: var(--dl-space-space-twounits);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-twounits);
+  justify-content: space-between;
+  background-color: var(--dl-color-gray-white);
+  border-top-right-radius: var(--dl-radius-radius-radius8);
+  border-bottom-right-radius: var(--dl-radius-radius-radius8);
+}
+.blog-post-element {
+  gap: var(--dl-space-space-unit);
+  width: auto;
+  user-select: none;
+  border-color: rgba(219, 219, 219, 0);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-halfunit);
+}
+.blog-post-text {
+  font-style: normal;
+  font-weight: 700;
+}
+.blog-post-text1 {
+  color: var(--dl-color-gray-500);
+  font-family: Nunito;
+  font-weight: 600;
+  margin-bottom: var(--dl-space-space-twounits);
+  text-transform: uppercase;
+}
+.blog-post-text2 {
+  width: 100%;
+  max-width: 535px;
+  font-family: Nunito;
+  line-height: 24px;
+  user-select: text;
+}
+
+
+
+@media(max-width: 991px) {
+  .blog-post-blog-post-card {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media(max-width: 767px) {
+  .blog-post-blog-post-card {
+    flex-direction: column;
+  }
+  .blog-post-image {
+    width: 100%;
+  }
+  .blog-post-element {
+    width: 100%;
+    max-width: auto;
+  }
+}
+@media(max-width: 479px) {
+  .blog-post-element {
+    width: 100%;
+    max-width: auto;
+  }
+}
