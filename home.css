@@ -706,7 +706,7 @@
 }
 .home-code-embed {
   width: 492px;
-  height: 100%;
+  height: 292px;
 }
 .home-image {
   width: 400px;
@@ -878,6 +878,9 @@
   .home-btn-group {
     display: none;
   }
+  .home-code-embed {
+    align-self: center;
+  }
   .home-speakers-container {
     grid-template-columns: 1fr 1fr;
   }
@@ -933,6 +936,9 @@
   .home-button1 {
     margin-top: var(--dl-space-space-unit);
     margin-left: 0px;
+  }
+  .home-code-embed {
+    width: auto;
   }
   .home-projects {
     padding-top: var(--dl-space-space-twounits);
