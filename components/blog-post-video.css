@@ -110,6 +110,12 @@
   }
 }
 @media(max-width: 479px) {
+  .blog-post-video-video {
+    width: 100%;
+    max-width: 100%;
+    border-top-right-radius: var(--dl-radius-radius-radius8);
+    border-bottom-left-radius: 0;
+  }
   .blog-post-video-element {
     width: 100%;
     max-width: auto;
