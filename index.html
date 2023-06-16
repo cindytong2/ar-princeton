@@ -1,8 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>AR Princeton</title>
-    <meta property="og:title" content="AR Princeton" />
+    <title>Augmented Reality Research at Princeton University</title>
+    <meta
+      name="description"
+      content="Our team creates AR systems that help people build social connections, learn new skills, and stay connected."
+    />
+    <meta
+      property="og:title"
+      content="Augmented Reality Research at Princeton University"
+    />
+    <meta
+      property="og:description"
+      content="Our team creates AR systems that help people build social connections, learn new skills, and stay connected."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -58,7 +69,7 @@
       <link href="./home.css" rel="stylesheet" />
       <script
         type="text/javascript"
-        src="https://unpkg.com/dangerous-html@0.1.12/dist/default/lib.umd.js"
+        src="https://unpkg.com/dangerous-html/dist/default/lib.umd.js"
       ></script>
 
       <div class="home-container">
@@ -79,14 +90,7 @@
                 <a href="index.html" class="header-navlink1">
                   <span>Projects</span>
                 </a>
-                <a
-                  href="https://ar.cs.princeton.edu/#team"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  class="header-link"
-                >
-                  <span>Team</span>
-                </a>
+                <a href="#team" class="header-link"><span>Team</span></a>
                 <span class="header-text"><span></span></span>
                 <span class="header-text1"><span></span></span>
                 <span class="header-text2"><span></span></span>
@@ -94,7 +98,12 @@
             </div>
           </div>
           <div class="header-btn-group">
-            <button class="button"><span>Contact Us</span></button>
+            <a
+              href="mailto:cs-capybara@princeton.edu?subject=Princeton AR (HCI)"
+              class="header-link1 button"
+            >
+              <span>Contact Us</span>
+            </a>
           </div>
           <div data-role="BurgerMenu" class="header-burger-menu">
             <svg viewBox="0 0 1024 1024" class="header-icon">
@@ -131,7 +140,7 @@
                   rel="noreferrer noopener"
                   class="navigation-links1-link"
                 >
-                  <span>About</span>
+                  <span>Projects</span>
                 </a>
                 <a
                   href="https://arprinceton.teleporthq.app/#team"
@@ -139,7 +148,7 @@
                   rel="noreferrer noopener"
                   class="navigation-links1-link1"
                 >
-                  <span>Project</span>
+                  <span>Team</span>
                 </a>
               </nav>
             </nav>
@@ -197,10 +206,11 @@
         <div id="projects" class="home-projects">
           <div class="home-container2">
             <div class="home-container3">
-              <a href="capybara.html" class="home-navlink">
-                <div
-                  class="blog-post-video-blog-post-card blog-post-video-root-class-name"
-                >
+              <a href="capybara.html" class="home-navlink"></a>
+              <div
+                class="blog-post-video-blog-post-card blog-post-video-root-class-name"
+              >
+                <a href="capybara.html" class="home-navlink">
                   <video
                     src="public/videos/capybara-cover.mp4"
                     loop=""
@@ -210,7 +220,9 @@
                     playsinline=""
                     class="blog-post-video-video"
                   ></video>
-                  <div class="blog-post-video-container">
+                </a>
+                <div class="blog-post-video-container">
+                  <a href="capybara.html" class="home-navlink">
                     <div
                       data-role="accordion-container"
                       class="blog-post-video-element accordion-element"
@@ -221,9 +233,15 @@
                       <span class="blog-post-video-text1">
                         <span>Programmable and Social AR for Children</span>
                       </span>
+                      <div class="blog-post-video-profile">
+                        <span>By</span>
+                        <span class="blog-post-video-text3">
+                          <span>Princeton HCI</span>
+                        </span>
+                      </div>
                       <span
                         data-role="accordion-content"
-                        class="blog-post-video-text2"
+                        class="blog-post-video-text4"
                       >
                         <span>
                           Capybara is a social AR app that aims to democratize
@@ -238,20 +256,53 @@
                         </span>
                       </span>
                     </div>
-                    <span class="blog-post-video-text3">
-                      <span>Learn more</span>
-                    </span>
+                  </a>
+                  <div class="blog-post-video-container1">
+                    <a href="capybara.html" class="home-navlink"></a>
+                    <div class="blog-post-video-container2">
+                      <a href="capybara.html" class="home-navlink"></a>
+                      <div class="blog-post-video-container3">
+                        <a href="capybara.html" class="home-navlink">
+                          <svg
+                            viewBox="0 0 1024 1024"
+                            class="blog-post-video-icon"
+                          >
+                            <path
+                              d="M981.333 512c0-129.579-52.565-246.997-137.472-331.861s-202.283-137.472-331.861-137.472-246.997 52.565-331.861 137.472-137.472 202.283-137.472 331.861 52.565 246.997 137.472 331.861 202.283 137.472 331.861 137.472 246.997-52.565 331.861-137.472 137.472-202.283 137.472-331.861zM896 512c0 106.069-42.923 201.984-112.469 271.531s-165.461 112.469-271.531 112.469-201.984-42.923-271.531-112.469-112.469-165.461-112.469-271.531 42.923-201.984 112.469-271.531 165.461-112.469 271.531-112.469 201.984 42.923 271.531 112.469 112.469 165.461 112.469 271.531zM341.333 554.667h238.336l-97.835 97.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l170.667-170.667c3.925-3.925 7.083-8.619 9.259-13.824 4.309-10.453 4.309-22.229 0-32.683-2.091-5.035-5.163-9.728-9.259-13.824l-170.667-170.667c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331l97.835 97.835h-238.336c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                            ></path>
+                          </svg>
+                        </a>
+                        <div class="component1-container">
+                          <a href="capybara.html" class="home-navlink"></a>
+                          <a
+                            href=""
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            class="component1-link"
+                          >
+                            <span>Learn more</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </a>
+              </div>
+
               <a
                 href="https://dl.acm.org/doi/10.1145/3544549.3585810"
                 target="_blank"
                 rel="noreferrer noopener"
                 class="home-link"
+              ></a>
+              <div
+                class="blog-post-video-blog-post-card blog-post-video-root-class-name2"
               >
-                <div
-                  class="blog-post-video-blog-post-card blog-post-video-root-class-name2"
+                <a
+                  href="https://dl.acm.org/doi/10.1145/3544549.3585810"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="home-link"
                 >
                   <video
                     src="public/videos/dream-garden.mp4"
@@ -262,7 +313,14 @@
                     playsinline=""
                     class="blog-post-video-video"
                   ></video>
-                  <div class="blog-post-video-container">
+                </a>
+                <div class="blog-post-video-container">
+                  <a
+                    href="https://dl.acm.org/doi/10.1145/3544549.3585810"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="home-link"
+                  >
                     <div
                       data-role="accordion-container"
                       class="blog-post-video-element accordion-element"
@@ -273,9 +331,15 @@
                       <span class="blog-post-video-text1">
                         <span>Collaboratively Created AR Spaces</span>
                       </span>
+                      <div class="blog-post-video-profile">
+                        <span>By</span>
+                        <span class="blog-post-video-text3">
+                          <span>Liz Petrov</span>
+                        </span>
+                      </div>
                       <span
                         data-role="accordion-content"
-                        class="blog-post-video-text2"
+                        class="blog-post-video-text4"
                       >
                         <span>
                           Despite the potential for connecting strangers in the
@@ -292,20 +356,73 @@
                         </span>
                       </span>
                     </div>
-                    <span class="blog-post-video-text3">
-                      <span>Learn more</span>
-                    </span>
+                  </a>
+                  <div class="blog-post-video-container1">
+                    <a
+                      href="https://dl.acm.org/doi/10.1145/3544549.3585810"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="home-link"
+                    ></a>
+                    <div class="blog-post-video-container2">
+                      <a
+                        href="https://dl.acm.org/doi/10.1145/3544549.3585810"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        class="home-link"
+                      ></a>
+                      <div class="blog-post-video-container3">
+                        <a
+                          href="https://dl.acm.org/doi/10.1145/3544549.3585810"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          class="home-link"
+                        >
+                          <svg
+                            viewBox="0 0 1024 1024"
+                            class="blog-post-video-icon"
+                          >
+                            <path
+                              d="M981.333 512c0-129.579-52.565-246.997-137.472-331.861s-202.283-137.472-331.861-137.472-246.997 52.565-331.861 137.472-137.472 202.283-137.472 331.861 52.565 246.997 137.472 331.861 202.283 137.472 331.861 137.472 246.997-52.565 331.861-137.472 137.472-202.283 137.472-331.861zM896 512c0 106.069-42.923 201.984-112.469 271.531s-165.461 112.469-271.531 112.469-201.984-42.923-271.531-112.469-112.469-165.461-112.469-271.531 42.923-201.984 112.469-271.531 165.461-112.469 271.531-112.469 201.984 42.923 271.531 112.469 112.469 165.461 112.469 271.531zM341.333 554.667h238.336l-97.835 97.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l170.667-170.667c3.925-3.925 7.083-8.619 9.259-13.824 4.309-10.453 4.309-22.229 0-32.683-2.091-5.035-5.163-9.728-9.259-13.824l-170.667-170.667c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331l97.835 97.835h-238.336c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                            ></path>
+                          </svg>
+                        </a>
+                        <div class="component1-container">
+                          <a
+                            href="https://dl.acm.org/doi/10.1145/3544549.3585810"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            class="home-link"
+                          ></a>
+                          <a
+                            href=""
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            class="component1-link"
+                          >
+                            <span>Learn more</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </a>
+              </div>
+
               <a
                 href="https://dl.acm.org/doi/10.1145/3544549.3585841"
                 target="_blank"
                 rel="noreferrer noopener"
                 class="home-link1"
+              ></a>
+              <div
+                class="blog-post-video-blog-post-card blog-post-video-root-class-name1"
               >
-                <div
-                  class="blog-post-video-blog-post-card blog-post-video-root-class-name1"
+                <a
+                  href="https://dl.acm.org/doi/10.1145/3544549.3585841"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="home-link1"
                 >
                   <video
                     src="public/videos/artic-escape.mp4"
@@ -316,7 +433,14 @@
                     playsinline=""
                     class="blog-post-video-video"
                   ></video>
-                  <div class="blog-post-video-container">
+                </a>
+                <div class="blog-post-video-container">
+                  <a
+                    href="https://dl.acm.org/doi/10.1145/3544549.3585841"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="home-link1"
+                  >
                     <div
                       data-role="accordion-container"
                       class="blog-post-video-element accordion-element"
@@ -327,9 +451,15 @@
                       <span class="blog-post-video-text1">
                         <span>Socially Engaging AR Escape Rooms</span>
                       </span>
+                      <div class="blog-post-video-profile">
+                        <span>By</span>
+                        <span class="blog-post-video-text3">
+                          <span>Theo Knoll</span>
+                        </span>
+                      </div>
                       <span
                         data-role="accordion-content"
-                        class="blog-post-video-text2"
+                        class="blog-post-video-text4"
                       >
                         <span>
                           While physical escape rooms provide groups with fun,
@@ -344,20 +474,73 @@
                         </span>
                       </span>
                     </div>
-                    <span class="blog-post-video-text3">
-                      <span>Learn more</span>
-                    </span>
+                  </a>
+                  <div class="blog-post-video-container1">
+                    <a
+                      href="https://dl.acm.org/doi/10.1145/3544549.3585841"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="home-link1"
+                    ></a>
+                    <div class="blog-post-video-container2">
+                      <a
+                        href="https://dl.acm.org/doi/10.1145/3544549.3585841"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        class="home-link1"
+                      ></a>
+                      <div class="blog-post-video-container3">
+                        <a
+                          href="https://dl.acm.org/doi/10.1145/3544549.3585841"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          class="home-link1"
+                        >
+                          <svg
+                            viewBox="0 0 1024 1024"
+                            class="blog-post-video-icon"
+                          >
+                            <path
+                              d="M981.333 512c0-129.579-52.565-246.997-137.472-331.861s-202.283-137.472-331.861-137.472-246.997 52.565-331.861 137.472-137.472 202.283-137.472 331.861 52.565 246.997 137.472 331.861 202.283 137.472 331.861 137.472 246.997-52.565 331.861-137.472 137.472-202.283 137.472-331.861zM896 512c0 106.069-42.923 201.984-112.469 271.531s-165.461 112.469-271.531 112.469-201.984-42.923-271.531-112.469-112.469-165.461-112.469-271.531 42.923-201.984 112.469-271.531 165.461-112.469 271.531-112.469 201.984 42.923 271.531 112.469 112.469 165.461 112.469 271.531zM341.333 554.667h238.336l-97.835 97.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l170.667-170.667c3.925-3.925 7.083-8.619 9.259-13.824 4.309-10.453 4.309-22.229 0-32.683-2.091-5.035-5.163-9.728-9.259-13.824l-170.667-170.667c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331l97.835 97.835h-238.336c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                            ></path>
+                          </svg>
+                        </a>
+                        <div class="component1-container">
+                          <a
+                            href="https://dl.acm.org/doi/10.1145/3544549.3585841"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            class="home-link1"
+                          ></a>
+                          <a
+                            href=""
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            class="component1-link"
+                          >
+                            <span>Learn more</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </a>
+              </div>
+
               <a
                 href="https://arxiv.org/abs/2301.00505"
                 target="_blank"
                 rel="noreferrer noopener"
                 class="home-link2"
+              ></a>
+              <div
+                class="blog-post-gif-blog-post-card blog-post-gif-root-class-name7"
               >
-                <div
-                  class="blog-post-gif-blog-post-card blog-post-gif-root-class-name7"
+                <a
+                  href="https://arxiv.org/abs/2301.00505"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="home-link2"
                 >
                   <img
                     alt="image"
@@ -365,7 +548,14 @@
                     image_src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDd8fHBvcnRyYWl0fGVufDB8fHx8MTYyNjM3ODk3Mg&amp;ixlib=rb-1.2.1&amp;h=1000"
                     class="blog-post-gif-image"
                   />
-                  <div class="blog-post-gif-container">
+                </a>
+                <div class="blog-post-gif-container">
+                  <a
+                    href="https://arxiv.org/abs/2301.00505"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="home-link2"
+                  >
                     <div
                       data-role="accordion-container"
                       class="blog-post-gif-element accordion-element"
@@ -374,9 +564,15 @@
                       <span class="blog-post-gif-text1">
                         <span>Facilitating Poker Play Through AR</span>
                       </span>
+                      <div class="blog-post-gif-profile">
+                        <span>By</span>
+                        <span class="blog-post-gif-text3">
+                          <span>Adam Gamba</span>
+                        </span>
+                      </div>
                       <span
                         data-role="accordion-content"
-                        class="blog-post-gif-text2"
+                        class="blog-post-gif-text4"
                       >
                         <span>
                           PokAR aims to alleviate the following three
@@ -393,10 +589,48 @@
                         </span>
                       </span>
                     </div>
-                    <span class="blog-post-gif-text3">Learn more</span>
+                  </a>
+                  <div class="blog-post-gif-container1">
+                    <a
+                      href="https://arxiv.org/abs/2301.00505"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="home-link2"
+                    ></a>
+                    <div class="blog-post-gif-container2">
+                      <a
+                        href="https://arxiv.org/abs/2301.00505"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        class="home-link2"
+                      ></a>
+                      <div class="component2-container">
+                        <a
+                          href="https://arxiv.org/abs/2301.00505"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          class="home-link2"
+                        >
+                          <svg viewBox="0 0 1024 1024" class="component2-icon">
+                            <path
+                              d="M981.333 512c0-129.579-52.565-246.997-137.472-331.861s-202.283-137.472-331.861-137.472-246.997 52.565-331.861 137.472-137.472 202.283-137.472 331.861 52.565 246.997 137.472 331.861 202.283 137.472 331.861 137.472 246.997-52.565 331.861-137.472 137.472-202.283 137.472-331.861zM896 512c0 106.069-42.923 201.984-112.469 271.531s-165.461 112.469-271.531 112.469-201.984-42.923-271.531-112.469-112.469-165.461-112.469-271.531 42.923-201.984 112.469-271.531 165.461-112.469 271.531-112.469 201.984 42.923 271.531 112.469 112.469 165.461 112.469 271.531zM341.333 554.667h238.336l-97.835 97.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l170.667-170.667c3.925-3.925 7.083-8.619 9.259-13.824 4.309-10.453 4.309-22.229 0-32.683-2.091-5.035-5.163-9.728-9.259-13.824l-170.667-170.667c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331l97.835 97.835h-238.336c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                            ></path>
+                          </svg>
+                        </a>
+                        <a
+                          href=""
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          class="component2-link"
+                        >
+                          <span>Learn more</span>
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </a>
+              </div>
+
               <div
                 class="blog-post-gif-blog-post-card blog-post-gif-root-class-name8"
               >
@@ -415,9 +649,15 @@
                     <span class="blog-post-gif-text1">
                       <span>Tagline</span>
                     </span>
+                    <div class="blog-post-gif-profile">
+                      <span>By</span>
+                      <span class="blog-post-gif-text3">
+                        <span>Jon Doe</span>
+                      </span>
+                    </div>
                     <span
                       data-role="accordion-content"
-                      class="blog-post-gif-text2"
+                      class="blog-post-gif-text4"
                     >
                       <span>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -430,7 +670,25 @@
                       </span>
                     </span>
                   </div>
-                  <span class="blog-post-gif-text3">Learn more</span>
+                  <div class="blog-post-gif-container1">
+                    <div class="blog-post-gif-container2">
+                      <div class="component2-container">
+                        <svg viewBox="0 0 1024 1024" class="component2-icon">
+                          <path
+                            d="M981.333 512c0-129.579-52.565-246.997-137.472-331.861s-202.283-137.472-331.861-137.472-246.997 52.565-331.861 137.472-137.472 202.283-137.472 331.861 52.565 246.997 137.472 331.861 202.283 137.472 331.861 137.472 246.997-52.565 331.861-137.472 137.472-202.283 137.472-331.861zM896 512c0 106.069-42.923 201.984-112.469 271.531s-165.461 112.469-271.531 112.469-201.984-42.923-271.531-112.469-112.469-165.461-112.469-271.531 42.923-201.984 112.469-271.531 165.461-112.469 271.531-112.469 201.984 42.923 271.531 112.469 112.469 165.461 112.469 271.531zM341.333 554.667h238.336l-97.835 97.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l170.667-170.667c3.925-3.925 7.083-8.619 9.259-13.824 4.309-10.453 4.309-22.229 0-32.683-2.091-5.035-5.163-9.728-9.259-13.824l-170.667-170.667c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331l97.835 97.835h-238.336c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                          ></path>
+                        </svg>
+                        <a
+                          href=""
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          class="component2-link"
+                        >
+                          <span>Learn more</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div
@@ -451,9 +709,15 @@
                     <span class="blog-post-gif-text1">
                       <span>Tagline</span>
                     </span>
+                    <div class="blog-post-gif-profile">
+                      <span>By</span>
+                      <span class="blog-post-gif-text3">
+                        <span>Jon Doe</span>
+                      </span>
+                    </div>
                     <span
                       data-role="accordion-content"
-                      class="blog-post-gif-text2"
+                      class="blog-post-gif-text4"
                     >
                       <span>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -466,7 +730,25 @@
                       </span>
                     </span>
                   </div>
-                  <span class="blog-post-gif-text3">Learn more</span>
+                  <div class="blog-post-gif-container1">
+                    <div class="blog-post-gif-container2">
+                      <div class="component2-container">
+                        <svg viewBox="0 0 1024 1024" class="component2-icon">
+                          <path
+                            d="M981.333 512c0-129.579-52.565-246.997-137.472-331.861s-202.283-137.472-331.861-137.472-246.997 52.565-331.861 137.472-137.472 202.283-137.472 331.861 52.565 246.997 137.472 331.861 202.283 137.472 331.861 137.472 246.997-52.565 331.861-137.472 137.472-202.283 137.472-331.861zM896 512c0 106.069-42.923 201.984-112.469 271.531s-165.461 112.469-271.531 112.469-201.984-42.923-271.531-112.469-112.469-165.461-112.469-271.531 42.923-201.984 112.469-271.531 165.461-112.469 271.531-112.469 201.984 42.923 271.531 112.469 112.469 165.461 112.469 271.531zM341.333 554.667h238.336l-97.835 97.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l170.667-170.667c3.925-3.925 7.083-8.619 9.259-13.824 4.309-10.453 4.309-22.229 0-32.683-2.091-5.035-5.163-9.728-9.259-13.824l-170.667-170.667c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331l97.835 97.835h-238.336c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                          ></path>
+                        </svg>
+                        <a
+                          href=""
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          class="component2-link"
+                        >
+                          <span>Learn more</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div
@@ -487,9 +769,15 @@
                     <span class="blog-post-gif-text1">
                       <span>Tagline</span>
                     </span>
+                    <div class="blog-post-gif-profile">
+                      <span>By</span>
+                      <span class="blog-post-gif-text3">
+                        <span>Jon Doe</span>
+                      </span>
+                    </div>
                     <span
                       data-role="accordion-content"
-                      class="blog-post-gif-text2"
+                      class="blog-post-gif-text4"
                     >
                       <span>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -502,7 +790,25 @@
                       </span>
                     </span>
                   </div>
-                  <span class="blog-post-gif-text3">Learn more</span>
+                  <div class="blog-post-gif-container1">
+                    <div class="blog-post-gif-container2">
+                      <div class="component2-container">
+                        <svg viewBox="0 0 1024 1024" class="component2-icon">
+                          <path
+                            d="M981.333 512c0-129.579-52.565-246.997-137.472-331.861s-202.283-137.472-331.861-137.472-246.997 52.565-331.861 137.472-137.472 202.283-137.472 331.861 52.565 246.997 137.472 331.861 202.283 137.472 331.861 137.472 246.997-52.565 331.861-137.472 137.472-202.283 137.472-331.861zM896 512c0 106.069-42.923 201.984-112.469 271.531s-165.461 112.469-271.531 112.469-201.984-42.923-271.531-112.469-112.469-165.461-112.469-271.531 42.923-201.984 112.469-271.531 165.461-112.469 271.531-112.469 201.984 42.923 271.531 112.469 112.469 165.461 112.469 271.531zM341.333 554.667h238.336l-97.835 97.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l170.667-170.667c3.925-3.925 7.083-8.619 9.259-13.824 4.309-10.453 4.309-22.229 0-32.683-2.091-5.035-5.163-9.728-9.259-13.824l-170.667-170.667c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331l97.835 97.835h-238.336c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                          ></path>
+                        </svg>
+                        <a
+                          href=""
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          class="component2-link"
+                        >
+                          <span>Learn more</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div
@@ -523,9 +829,15 @@
                     <span class="blog-post-gif-text1">
                       <span>Tagline</span>
                     </span>
+                    <div class="blog-post-gif-profile">
+                      <span>By</span>
+                      <span class="blog-post-gif-text3">
+                        <span>Jon Doe</span>
+                      </span>
+                    </div>
                     <span
                       data-role="accordion-content"
-                      class="blog-post-gif-text2"
+                      class="blog-post-gif-text4"
                     >
                       <span>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -538,7 +850,25 @@
                       </span>
                     </span>
                   </div>
-                  <span class="blog-post-gif-text3">Learn more</span>
+                  <div class="blog-post-gif-container1">
+                    <div class="blog-post-gif-container2">
+                      <div class="component2-container">
+                        <svg viewBox="0 0 1024 1024" class="component2-icon">
+                          <path
+                            d="M981.333 512c0-129.579-52.565-246.997-137.472-331.861s-202.283-137.472-331.861-137.472-246.997 52.565-331.861 137.472-137.472 202.283-137.472 331.861 52.565 246.997 137.472 331.861 202.283 137.472 331.861 137.472 246.997-52.565 331.861-137.472 137.472-202.283 137.472-331.861zM896 512c0 106.069-42.923 201.984-112.469 271.531s-165.461 112.469-271.531 112.469-201.984-42.923-271.531-112.469-112.469-165.461-112.469-271.531 42.923-201.984 112.469-271.531 165.461-112.469 271.531-112.469 201.984 42.923 271.531 112.469 112.469 165.461 112.469 271.531zM341.333 554.667h238.336l-97.835 97.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l170.667-170.667c3.925-3.925 7.083-8.619 9.259-13.824 4.309-10.453 4.309-22.229 0-32.683-2.091-5.035-5.163-9.728-9.259-13.824l-170.667-170.667c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331l97.835 97.835h-238.336c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                          ></path>
+                        </svg>
+                        <a
+                          href=""
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          class="component2-link"
+                        >
+                          <span>Learn more</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div
@@ -559,9 +889,15 @@
                     <span class="blog-post-gif-text1">
                       <span>Tagline</span>
                     </span>
+                    <div class="blog-post-gif-profile">
+                      <span>By</span>
+                      <span class="blog-post-gif-text3">
+                        <span>Jon Doe</span>
+                      </span>
+                    </div>
                     <span
                       data-role="accordion-content"
-                      class="blog-post-gif-text2"
+                      class="blog-post-gif-text4"
                     >
                       <span>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -574,7 +910,25 @@
                       </span>
                     </span>
                   </div>
-                  <span class="blog-post-gif-text3">Learn more</span>
+                  <div class="blog-post-gif-container1">
+                    <div class="blog-post-gif-container2">
+                      <div class="component2-container">
+                        <svg viewBox="0 0 1024 1024" class="component2-icon">
+                          <path
+                            d="M981.333 512c0-129.579-52.565-246.997-137.472-331.861s-202.283-137.472-331.861-137.472-246.997 52.565-331.861 137.472-137.472 202.283-137.472 331.861 52.565 246.997 137.472 331.861 202.283 137.472 331.861 137.472 246.997-52.565 331.861-137.472 137.472-202.283 137.472-331.861zM896 512c0 106.069-42.923 201.984-112.469 271.531s-165.461 112.469-271.531 112.469-201.984-42.923-271.531-112.469-112.469-165.461-112.469-271.531 42.923-201.984 112.469-271.531 165.461-112.469 271.531-112.469 201.984 42.923 271.531 112.469 112.469 165.461 112.469 271.531zM341.333 554.667h238.336l-97.835 97.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l170.667-170.667c3.925-3.925 7.083-8.619 9.259-13.824 4.309-10.453 4.309-22.229 0-32.683-2.091-5.035-5.163-9.728-9.259-13.824l-170.667-170.667c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331l97.835 97.835h-238.336c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                          ></path>
+                        </svg>
+                        <a
+                          href=""
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          class="component2-link"
+                        >
+                          <span>Learn more</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

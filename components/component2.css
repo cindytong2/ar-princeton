@@ -1,0 +1,33 @@
+.component2-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.component2-icon {
+  width: 24px;
+  height: 24px;
+}
+.component2-link {
+  width: auto;
+  cursor: pointer;
+  font-size: 18px;
+  max-width: 535px;
+  font-style: normal;
+  transition: 0.3s;
+  font-family: Nunito;
+  font-weight: 600;
+  line-height: 27px;
+  padding-left: var(--dl-space-space-halfunit);
+  text-decoration: none;
+}
+.component2-link:hover {
+  color: var(--dl-color-violet-400);
+}
+@media(max-width: 767px) {
+  .component2-link {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

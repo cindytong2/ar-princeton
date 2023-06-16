@@ -1,0 +1,32 @@
+.component-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.component-icon {
+  width: 24px;
+  height: 24px;
+}
+.component-link {
+  width: auto;
+  cursor: pointer;
+  font-size: 18px;
+  max-width: 535px;
+  font-style: normal;
+  transition: 0.3s;
+  font-family: Nunito;
+  font-weight: 600;
+  line-height: 27px;
+  text-decoration: none;
+}
+.component-link:hover {
+  color: var(--dl-color-violet-400);
+}
+@media(max-width: 767px) {
+  .component-link {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
