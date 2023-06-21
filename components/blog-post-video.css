@@ -137,6 +137,9 @@
 .blog-post-video-root-class-name2 {
   align-self: stretch;
 }
+.blog-post-video-root-class-name3 {
+  align-self: stretch;
+}
 @media(max-width: 991px) {
   .blog-post-video-blog-post-card {
     flex-direction: row;

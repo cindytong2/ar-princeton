@@ -126,22 +126,6 @@
   flex-direction: row;
   justify-content: flex-start;
 }
-.blog-post-gif-root-class-name1 {
-  display: none;
-}
-.blog-post-gif-root-class-name2 {
-  display: none;
-}
-.blog-post-gif-root-class-name4 {
-  display: none;
-}
-.blog-post-gif-root-class-name6 {
-  display: none;
-}
-
-.blog-post-gif-root-class-name8 {
-  display: none;
-}
 @media(max-width: 991px) {
   .blog-post-gif-blog-post-card {
     flex-direction: row;

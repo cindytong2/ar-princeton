@@ -59,6 +59,7 @@
   height: 21px;
 }
 .team-card-container {
+  width: auto;
   display: flex;
   align-items: center;
   border-radius: var(--dl-radius-radius-radius8);
