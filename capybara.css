@@ -393,6 +393,7 @@
   width: 100%;
   height: auto;
   display: flex;
+  align-self: center;
   align-items: flex-start;
   border-radius: var(--dl-radius-radius-radius4);
   margin-bottom: var(--dl-space-space-twounits);
@@ -408,7 +409,7 @@
   justify-content: center;
 }
 .capybara-video {
-  width: 100%;
+  width: auto;
   height: 500px;
   max-width: 100%;
   align-self: stretch;
@@ -417,7 +418,7 @@
 }
 .capybara-video1 {
   flex: 1;
-  width: 100%;
+  width: auto;
   height: 500px;
 }
 .capybara-text06 {
@@ -523,6 +524,12 @@
 @media(max-width: 991px) {
   .capybara-projects {
     border-radius: 0px;
+  }
+  .capybara-container4 {
+    align-self: center;
+  }
+  .capybara-video {
+    max-width: auto;
   }
   .capybara-container6 {
     width: 100%;
