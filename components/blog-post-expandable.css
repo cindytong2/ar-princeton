@@ -124,6 +124,9 @@
   display: none;
   margin-top: 6px;
 }
+.blog-post-expandable-container3 {
+  display: contents;
+}
 @media(max-width: 991px) {
   .blog-post-expandable-blog-post-card {
     flex-direction: row;
