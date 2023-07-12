@@ -660,18 +660,6 @@
   margin-top: var(--dl-space-space-halfunit);
   font-weight: 500;
 }
-.team-card-root-class-name {
-  display: none;
-}
-.team-card-root-class-name1 {
-  display: none;
-}
-.team-card-root-class-name2 {
-  display: none;
-}
-.team-card-root-class-name3 {
-  display: none;
-}
 
 .alumni-card-speaker-card {
   display: flex;
@@ -870,11 +858,6 @@
 .home-code-embed {
   display: contents;
 }
-.home-image {
-  width: 400px;
-  display: none;
-  object-fit: cover;
-}
 .home-projects {
   width: 100%;
   display: flex;
@@ -993,9 +976,6 @@
   .home-text03 {
     padding-left: var(--dl-space-space-unit);
     padding-right: var(--dl-space-space-unit);
-  }
-  .home-image {
-    width: 80%;
   }
   .home-projects {
     padding-left: var(--dl-space-space-twounits);
