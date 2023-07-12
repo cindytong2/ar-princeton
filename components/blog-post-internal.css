@@ -1,14 +1,10 @@
 .blog-post-internal-blog-post-card {
   cursor: default;
   display: flex;
-  transition: 0.3s;
   align-items: stretch;
   border-radius: var(--dl-radius-radius-radius8);
   flex-direction: row;
   background-color: #ffffff;
-}
-.blog-post-internal-blog-post-card:hover {
-  transform: scale(1.02);
 }
 .blog-post-internal-video {
   width: 320px;
@@ -44,6 +40,7 @@
 .blog-post-internal-text {
   font-style: normal;
   font-weight: 700;
+  text-decoration: none;
 }
 .blog-post-internal-text1 {
   color: var(--dl-color-gray-500);
@@ -97,7 +94,7 @@
   flex-direction: row;
   justify-content: flex-start;
 }
-.blog-post-internal-navlink {
+.blog-post-internal-navlink1 {
   display: contents;
 }
 .blog-post-internal-container4 {
@@ -105,6 +102,9 @@
   position: relative;
   align-items: center;
   text-decoration: none;
+}
+.blog-post-internal-container5 {
+  display: contents;
 }
 .blog-post-internal-text5 {
   width: auto;

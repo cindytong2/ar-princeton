@@ -389,37 +389,58 @@
   user-select: text;
 }
 .capybara-container4 {
-  flex: 0 0 auto;
   width: 100%;
+  height: 567px;
+  display: flex;
+  overflow: hidden;
+  align-items: flex-start;
+  border-radius: var(--dl-radius-radius-radius4);
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.capybara-container5 {
+  flex: 0 0 auto;
+  width: 50%;
   height: auto;
   display: flex;
+  overflow: auto;
   align-self: center;
+  max-height: var(--dl-size-size-maxwidth);
   align-items: flex-start;
   border-radius: var(--dl-radius-radius-radius4);
   margin-bottom: var(--dl-space-space-twounits);
   justify-content: center;
   background-color: var(--dl-color-violet-50);
 }
-.capybara-container5 {
-  flex: 0 0 auto;
-  width: auto;
-  height: auto;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
 .capybara-video {
-  width: auto;
-  height: 500px;
-  max-width: 100%;
-  align-self: stretch;
+  flex: 1;
+  width: 100%;
+  max-width: auto;
+  align-self: center;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
+.capybara-container6 {
+  flex: 0 0 auto;
+  width: 50%;
+  height: auto;
+  display: flex;
+  overflow: auto;
+  align-self: center;
+  max-height: var(--dl-size-size-maxwidth);
+  align-items: flex-start;
+  border-radius: var(--dl-radius-radius-radius4);
+  margin-bottom: var(--dl-space-space-twounits);
+  justify-content: center;
+  background-color: var(--dl-color-violet-50);
+}
 .capybara-video1 {
   flex: 1;
-  width: auto;
-  height: 500px;
+  width: 100%;
+  max-width: auto;
+  align-self: center;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .capybara-text06 {
   font-style: normal;
@@ -431,7 +452,7 @@
   line-height: 24px;
   user-select: text;
 }
-.capybara-container6 {
+.capybara-container7 {
   flex: 0 0 auto;
   width: 100%;
   height: 500px;
@@ -526,12 +547,21 @@
     border-radius: 0px;
   }
   .capybara-container4 {
+    max-height: 400px;
+  }
+  .capybara-container5 {
     align-self: center;
   }
   .capybara-video {
     max-width: auto;
   }
   .capybara-container6 {
+    align-self: center;
+  }
+  .capybara-video1 {
+    max-width: auto;
+  }
+  .capybara-container7 {
     width: 100%;
   }
   .capybara-image {
@@ -559,22 +589,32 @@
     max-width: 100%;
   }
   .capybara-container4 {
-    width: 100%;
-    align-self: center;
+    height: 400px;
+    max-height: 290px;
   }
   .capybara-container5 {
-    flex-direction: row;
+    width: 100%;
+    max-width: 50%;
+    align-self: center;
   }
   .capybara-video {
     width: auto;
-    height: 250px;
+    height: auto;
     max-width: 100%;
     border-top-right-radius: var(--dl-radius-radius-radius8);
     border-bottom-left-radius: 0px;
   }
-  .capybara-video1 {
+  .capybara-container6 {
     width: 100%;
-    height: 250px;
+    max-width: 50%;
+    align-self: center;
+  }
+  .capybara-video1 {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    border-top-right-radius: var(--dl-radius-radius-radius8);
+    border-bottom-left-radius: 0px;
   }
   .capybara-text07 {
     max-width: 100%;
@@ -609,20 +649,30 @@
     padding-bottom: var(--dl-space-space-twounits);
   }
   .capybara-container4 {
+    height: 300px;
+    max-height: 200px;
+  }
+  .capybara-container5 {
     align-self: center;
   }
   .capybara-video {
     width: auto;
-    height: 250px;
+    height: auto;
     max-width: 100%;
     border-top-right-radius: var(--dl-radius-radius-radius8);
     border-bottom-left-radius: 0;
   }
+  .capybara-container6 {
+    align-self: center;
+  }
   .capybara-video1 {
     width: auto;
-    height: 250px;
+    height: auto;
+    max-width: 100%;
+    border-top-right-radius: var(--dl-radius-radius-radius8);
+    border-bottom-left-radius: 0;
   }
-  .capybara-container6 {
+  .capybara-container7 {
     width: 100%;
     height: auto;
     flex-direction: row;
@@ -630,11 +680,17 @@
   .capybara-image {
     width: 50%;
     height: 250px;
+    border-radius: var(--dl-radius-radius-radius4);
     margin-bottom: 0px;
+    border-top-left-radius: var(--dl-radius-radius-radius4);
+    border-bottom-left-radius: var(--dl-radius-radius-radius4);
   }
   .capybara-image1 {
     width: 50%;
     height: 250px;
+    border-radius: var(--dl-radius-radius-radius4);
+    border-top-right-radius: var(--dl-radius-radius-radius4);
+    border-bottom-right-radius: var(--dl-radius-radius-radius4);
   }
   .capybara-image2 {
     width: 100%;
