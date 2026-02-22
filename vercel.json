@@ -1,0 +1,10 @@
+{
+  "rewrites": [
+    { "source": "/social", "destination": "/index.html" },
+    { "source": "/education", "destination": "/index.html" },
+    { "source": "/programming", "destination": "/index.html" },
+    { "source": "/ar", "destination": "/index.html" },
+    { "source": "/collaboration", "destination": "/index.html" },
+    { "source": "/game", "destination": "/index.html" }
+  ]
+}
