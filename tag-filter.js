@@ -1,10 +1,21 @@
 (function() {
+  function getBasePath() {
+    var segments = window.location.pathname.split('/').filter(Boolean);
+    return segments.length >= 1 ? '/' + segments[0] : '';
+  }
+
+  var REPO_NAME = 'ar-princeton';
+
   function getTagFromPath() {
-    const path = window.location.pathname;
-    if (!path || path === '/' || path.endsWith('/index.html') || path.endsWith('/')) return null;
-    const segments = path.split('/').filter(Boolean);
-    const lastSegment = segments.length > 0 ? segments[segments.length - 1].toLowerCase() : null;
-    if (!lastSegment || lastSegment === 'index.html') return null;
+    var path = window.location.pathname;
+    var segments = path.split('/').filter(Boolean);
+    if (segments.length === 0) return null;
+    if (segments.length === 1) {
+      if (segments[0].toLowerCase() === REPO_NAME) return null;
+      return segments[0].toLowerCase();
+    }
+    var lastSegment = segments[segments.length - 1].toLowerCase();
+    if (lastSegment === 'index.html') return null;
     return lastSegment;
   }
 
@@ -34,7 +45,8 @@
         e.stopPropagation();
         const tag = this.getAttribute('data-tag');
         if (tag) {
-          const newPath = '/' + tag;
+          var base = getBasePath();
+          var newPath = base + (base ? '/' : '') + tag;
           history.pushState(null, '', newPath);
           handleNavigation();
         }
