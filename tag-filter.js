@@ -31,33 +31,67 @@
     });
   }
 
-  function handleNavigation() {
-    const tag = getTagFromPath();
-    filterCards(tag);
-  }
-
-  function initTagClicks() {
-    // Attach click handlers directly to each tag link
-    const tagLinks = document.querySelectorAll('.project-tag');
-    tagLinks.forEach(function(tagLink) {
-      tagLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        const tag = this.getAttribute('data-tag');
-        if (tag) {
-          var base = getBasePath();
-          var newPath = base + (base ? '/' : '') + tag;
-          history.pushState(null, '', newPath);
-          handleNavigation();
-        }
-      });
+  function setActiveTag(tag) {
+    document.querySelectorAll('.project-tag').forEach(function(el) {
+      el.classList.toggle('is-active', el.getAttribute('data-tag') === tag);
     });
   }
 
-  // Initialize on load
+  function updateResetBar(tag) {
+    var bar = document.getElementById('filter-reset-bar');
+    var label = document.getElementById('filter-active-label');
+    if (!bar) return;
+    if (tag) {
+      bar.classList.add('is-visible');
+      if (label) label.textContent = tag;
+    } else {
+      bar.classList.remove('is-visible');
+      if (label) label.textContent = '';
+    }
+  }
+
+  // tag may be passed directly (from click) or derived from URL (from popstate)
+  function handleNavigation(forcedTag) {
+    var tag = (forcedTag !== undefined) ? forcedTag : getTagFromPath();
+    filterCards(tag);
+    setActiveTag(tag);
+    updateResetBar(tag);
+  }
+
+  function applyTag(tag) {
+    if (tag) {
+      try {
+        var base = getBasePath();
+        var newPath = base + (base ? '/' : '') + tag;
+        history.pushState(null, '', newPath);
+      } catch (err) {}
+    } else {
+      try {
+        var base = getBasePath();
+        history.pushState(null, '', base || '/');
+      } catch (err) {}
+    }
+    handleNavigation(tag);
+  }
+
   function init() {
     handleNavigation();
-    initTagClicks();
+
+    // Use capture phase so this fires before the teleport accordion handler,
+    // which would otherwise swallow clicks on tags inside accordion containers.
+    document.addEventListener('click', function(e) {
+      var tagEl = e.target.closest && e.target.closest('.project-tag');
+      if (tagEl) {
+        e.preventDefault();
+        e.stopPropagation();
+        applyTag(tagEl.getAttribute('data-tag') || null);
+        return;
+      }
+      if (e.target.closest && e.target.closest('#filter-reset-btn')) {
+        e.preventDefault();
+        applyTag(null);
+      }
+    }, true); // capture: true
   }
 
   if (document.readyState === 'loading') {
@@ -65,6 +99,6 @@
   } else {
     init();
   }
-  
-  window.addEventListener('popstate', handleNavigation);
+
+  window.addEventListener('popstate', function() { handleNavigation(); });
 })();

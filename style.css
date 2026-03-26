@@ -169,67 +169,79 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 12px;
-  background-color: #f0f0f0;
+  padding: 5px 11px;
+  background-color: #f2f2f2;
   border-radius: 20px;
-  font-size: 13px;
-  font-weight: 500;
-  color: #333;
+  font-size: 12px;
+  font-weight: 400;
+  color: #666;
   cursor: pointer;
   transition: all 0.2s ease;
   text-decoration: none;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #ddd;
 }
 
 .project-tag:hover {
-  filter: brightness(0.92);
+  background-color: #e8e8e8;
+  color: #444;
+  border-color: #ccc;
+}
+
+/* Toggled-on state when this tag is selected */
+.project-tag.is-active {
+  background-color: #333;
+  color: #fff;
+  border-color: #222;
+  font-weight: 600;
 }
 
 .project-tag-icon {
-  width: 14px;
-  height: 14px;
-  display: inline-block;
-  border-radius: 50%;
-  flex-shrink: 0;
-  background: currentColor;
-  opacity: 0.8;
+  display: none;
 }
 
-/* Tag-specific colors */
-.project-tag[data-tag="social"] {
-  background-color: #e8f4fd;
-  color: #0d6efd;
-  border-color: #b6d4fe;
-}
-
-.project-tag[data-tag="education"] {
-  background-color: #fff3cd;
-  color: #997404;
-  border-color: #ffecb5;
-}
-
-.project-tag[data-tag="programming"] {
-  background-color: #d1e7dd;
-  color: #0f5132;
-  border-color: #a3cfbb;
-}
-
-.project-tag[data-tag="ar"] {
-  background-color: #e2d9f3;
-  color: #5a2d9e;
-  border-color: #c4b5e0;
-}
-
-.project-tag[data-tag="collaboration"] {
-  background-color: #f8d7da;
-  color: #842029;
-  border-color: #f5c2c7;
-}
-
+/* Tag-specific colors — all muted/neutral, no per-tag hues */
+.project-tag[data-tag="social"],
+.project-tag[data-tag="education"],
+.project-tag[data-tag="programming"],
+.project-tag[data-tag="ar"],
+.project-tag[data-tag="collaboration"],
 .project-tag[data-tag="game"] {
-  background-color: #cff4fc;
-  color: #055160;
-  border-color: #9eeaf9;
+  /* intentionally unstyled — use base .project-tag styles */
+}
+
+/* Active filter bar */
+.filter-reset-bar {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: var(--dl-space-space-unit);
+  font-size: 13px;
+  color: #555;
+}
+
+.filter-reset-bar.is-visible {
+  display: flex;
+}
+
+.filter-reset-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+  background-color: transparent;
+  border: 1px solid #aaa;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+}
+
+.filter-reset-btn:hover {
+  background-color: #eee;
+  border-color: #888;
+  color: #333;
 }
 
 /* Hide spline-viewer loading animation */
