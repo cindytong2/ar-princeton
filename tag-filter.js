@@ -80,16 +80,18 @@
     // Use capture phase so this fires before the teleport accordion handler,
     // which would otherwise swallow clicks on tags inside accordion containers.
     document.addEventListener('click', function(e) {
+      if (e.target.closest && e.target.closest('.project-tag-clear')) {
+        e.preventDefault();
+        e.stopPropagation();
+        applyTag(null);
+        return;
+      }
       var tagEl = e.target.closest && e.target.closest('.project-tag');
       if (tagEl) {
         e.preventDefault();
         e.stopPropagation();
         applyTag(tagEl.getAttribute('data-tag') || null);
         return;
-      }
-      if (e.target.closest && e.target.closest('#filter-reset-btn')) {
-        e.preventDefault();
-        applyTag(null);
       }
     }, true); // capture: true
   }

@@ -209,39 +209,26 @@
   /* intentionally unstyled — use base .project-tag styles */
 }
 
-/* Active filter bar */
+/* Active filter bar — hidden, reset is now inline in the tag */
 .filter-reset-bar {
+  display: none !important;
+}
+
+/* × dismiss button inside tag — only visible when tag is active */
+.project-tag-clear {
   display: none;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: var(--dl-space-space-unit);
+  margin-left: 2px;
   font-size: 13px;
-  color: #555;
+  line-height: 1;
+  opacity: 0.7;
 }
 
-.filter-reset-bar.is-visible {
-  display: flex;
+.project-tag.is-active .project-tag-clear {
+  display: inline;
 }
 
-.filter-reset-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 4px 12px;
-  background-color: transparent;
-  border: 1px solid #aaa;
-  border-radius: 20px;
-  font-size: 12px;
-  color: #555;
-  cursor: pointer;
-  transition: all 0.15s ease;
-  font-family: inherit;
-}
-
-.filter-reset-btn:hover {
-  background-color: #eee;
-  border-color: #888;
-  color: #333;
+.project-tag-clear:hover {
+  opacity: 1;
 }
 
 /* Hide spline-viewer loading animation */
@@ -249,4 +236,11 @@ spline-viewer::part(loader),
 spline-viewer [class*="loader"],
 spline-viewer [class*="loading"] {
   display: none !important;
+}
+
+#project-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--dl-space-space-twounits);
+  width: 100%;
 }
