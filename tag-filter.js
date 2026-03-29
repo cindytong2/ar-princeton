@@ -4,7 +4,7 @@
     return segments.length >= 1 ? '/' + segments[0] : '';
   }
 
-  var REPO_NAME = 'ar-princeton';
+  var REPO_NAME = 'ar-princeton-copy';
 
   function getTagFromPath() {
     var path = window.location.pathname;

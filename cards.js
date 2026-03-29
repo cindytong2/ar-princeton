@@ -59,7 +59,7 @@ var PROJECTS = [
   },
   {
     type: 'external',
-    video: '',
+    video: 'public/cover-videos/anchor-note.mp4',
     title: 'AnchorNote',
     titleLink: 'https://drive.google.com/file/d/1ekovWmMAqBWOC4D-0UzcPD0lGRfpDEMi/view',
     subtitle: 'Exploring Gesture- and Speech-Based Spatial Sticky Notes for Collaboration in Augmented Reality',
@@ -70,7 +70,7 @@ var PROJECTS = [
   },
   {
     type: 'external',
-    video: '',
+    video: 'public/cover-videos/soundscape.mp4',
     title: 'Soundscape',
     titleLink: 'https://drive.google.com/file/d/1PXZBj6gvwCFeWRud5MdYnY7zVmvI3UUr/view',
     subtitle: 'An AR System for Spatially Persistent Music Tagging and Social Discovery',
@@ -81,7 +81,7 @@ var PROJECTS = [
   },
   {
     type: 'external',
-    video: '',
+    video: 'public/cover-videos/pairformance.mp4',
     title: 'Pairformance',
     titleLink: 'https://drive.google.com/file/d/1QR8RzwAWyNrGJJwUPnmGUb3QRE8YDqUG/view',
     subtitle: 'Enabling Personal Trainer-Level Guidance',
@@ -92,7 +92,7 @@ var PROJECTS = [
   },
   {
     type: 'external',
-    video: '',
+    video: 'public/cover-videos/spyglass.mp4',
     title: 'Spyglass',
     titleLink: 'https://drive.google.com/file/d/1Zkj1ckuBAOjYgcaVz1lJXtue_SCDC5ne/view',
     subtitle: 'Exploring Asymmetric Information in Co-located Augmented Reality',
@@ -103,7 +103,7 @@ var PROJECTS = [
   },
   {
     type: 'external',
-    video: '',
+    video: 'public/cover-videos/order-up.mp4',
     title: 'Order Up!',
     titleLink: 'https://drive.google.com/file/d/1t9K6xvgSGue0gsS9t-dKhhLqXsF-UuSi/view',
     subtitle: 'A Collaborative AR Kitchen Game for Teamwork Training',
@@ -114,7 +114,7 @@ var PROJECTS = [
   },
   {
     type: 'external',
-    video: '',
+    video: 'public/cover-videos/focus-proxy.mp4',
     title: 'FocusProxy',
     titleLink: 'https://drive.google.com/file/d/1V2YetHkgZzb_P98mg4xi-_CNc82MDK_Z/view',
     subtitle: 'Ambient Co-Presence for Studying with Augmented Reality',
@@ -125,7 +125,7 @@ var PROJECTS = [
   },
   {
     type: 'external',
-    video: '',
+    video: 'public/cover-videos/ar-storytelling-studio.mp4',
     title: 'AR Storytelling Studio',
     titleLink: 'https://drive.google.com/file/d/1nQIYiH0NiNBVqZmX5QEaRgKSwuX9viia/view',
     subtitle: 'Interactive Augmented Reality Theater Using LLM-Powered NPCs',
@@ -136,7 +136,7 @@ var PROJECTS = [
   },
   {
     type: 'external',
-    video: '',
+    video: 'public/cover-videos/cadence.mp4',
     title: 'Cadence',
     titleLink: 'https://drive.google.com/file/d/12pX16u0gL0KHSQ8XJBcGBSPuSi2IaK-z/view',
     subtitle: 'AI-Enabled Spatial Chord Mapping in Augmented Reality for Novice Composers',
@@ -147,7 +147,7 @@ var PROJECTS = [
   },
   {
     type: 'external',
-    video: '',
+    video: 'public/cover-videos/together-in-reality.mp4',
     title: 'Together in Reality',
     titleLink: 'https://drive.google.com/file/d/16PYmhNmUZO6KV6TY_tdyvtRy1TJxEKDm/view',
     subtitle: 'A Collaborative AR Puzzle Adventure',
@@ -158,7 +158,7 @@ var PROJECTS = [
   },
   {
     type: 'external',
-    video: '',
+    video: 'public/cover-videos/artistry.mp4',
     title: 'ARTistry',
     titleLink: 'https://drive.google.com/file/d/1u7eBY5vM3MSN1lYIwP-Iy8tFCYaseh6w/view',
     subtitle: 'Object-Guided Augmented Reality for Teaching Foundational Drawing Techniques Through Spatial Decomposition and Collaboration',
@@ -216,10 +216,13 @@ function renderCard(project) {
 
   var icon = isInternal ? ICON_INTERNAL : ICON_EXTERNAL;
   var iconWrapClass = isInternal ? (prefix + '-container5') : (prefix + '-code-embed');
+  var videoHtml = p.video
+    ? '<video src="' + escapeHtml(p.video) + '" loop="" muted="" preload="auto" autoplay="" playsinline="" class="' + prefix + '-video"></video>'
+    : '';
 
   return (
     '<div class="' + prefix + '-blog-post-card project-card" data-tags="' + escapeHtml(tagsAttr) + '">'
-    + '<video src="' + escapeHtml(p.video) + '" loop="" muted="" preload="auto" autoplay="" playsinline="" class="' + prefix + '-video"></video>'
+    + videoHtml
     + '<div class="' + prefix + '-container">'
       + '<div data-role="accordion-container" class="' + prefix + '-element accordion-element">'
         + titleAnchorOpen
