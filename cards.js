@@ -14,15 +14,15 @@
 
 var PROJECTS = [
   {
-    type: 'internal',
+    type: 'external',
     video: 'public/cover-videos/capybara-cover.mp4',
     title: 'Capybara',
     titleLink: 'capybara.html',
     subtitle: 'Programmable and Social AR for Children',
     author: 'Princeton HCI',
-    tags: [],
+    tags: ['mobile'],
     description: 'Capybara is a social AR app that aims to democratize AR by empowering young people to express themselves through creating AR content with others while learning programming. Inspired by Scratch and Pokémon GO, Capybara will enable people of all ages can used block-based programming to build AR experiences with 3D characters that they can place at physical locations, which others can interact with and remix into their own creations.',
-    learnMoreUrl: 'capybara.html',
+    learnMoreUrl: 'https://capybara.cs.princeton.edu',
   },
   {
     type: 'external',
@@ -31,7 +31,7 @@ var PROJECTS = [
     titleLink: 'https://dl.acm.org/doi/10.1145/3544549.3585810',
     subtitle: 'Collaboratively Created AR Spaces',
     author: 'Liz Petrov',
-    tags: [],
+    tags: ['mobile'],
     description: 'Despite the potential for connecting strangers in the digital realm, current research has not explored location-based augmented reality experiences that enable strangers to connect by building artifacts collaboratively. With Dream Garden, anyone can see 3D flowers planted by strangers, and plant their own flowers to grow the garden. Dream Garden gives us insights on how we can use augmented reality as a tool to bring people together in real life, creating technologies that bring us together instead of driving us apart.',
     learnMoreUrl: 'https://dl.acm.org/doi/10.1145/3544549.3585810',
   },
@@ -42,7 +42,7 @@ var PROJECTS = [
     titleLink: 'https://dl.acm.org/doi/10.1145/3544549.3585841',
     subtitle: 'Socially Engaging AR Escape Rooms',
     author: 'Theo Knoll',
-    tags: [],
+    tags: ['mobile'],
     description: 'While physical escape rooms provide groups with fun, social experiences, they require a gameplay venue, props, and a game master, all of which detract from their ease of access. We present ARctic Escape, a co-located augmented reality two-person escape room designed to promote collaboration through play. Participants found that the ARctic Escape experience was fun, collaborative, promoted discussion, and inspired new social dynamics.',
     learnMoreUrl: 'https://dl.acm.org/doi/10.1145/3544549.3585841',
   },
@@ -53,7 +53,7 @@ var PROJECTS = [
     titleLink: 'https://arxiv.org/abs/2301.00505',
     subtitle: 'Facilitating Poker Play Through AR',
     author: 'Adam Gamba',
-    tags: [],
+    tags: ['mobile'],
     description: 'PokAR aims to alleviate the following three difficulties of traditional poker by leveraging AR technology: (1) the need to have physical poker chips, (2) complex rules of poker, and (3) slow game pace caused by laborious tasks. With PokAR, two players engage in heads-up Texas hold\'em poker, utilizing AR on their mobile devices to facilitate gameplay. We found that PokAR slightly increased the game pace, and participants had an overall enjoyable experience, suggesting that AR has the potential to augment and simplify traditional table games.',
     learnMoreUrl: 'https://arxiv.org/abs/2301.00505',
   },
@@ -186,7 +186,8 @@ function escapeHtml(str) {
 }
 
 var TAG_ICONS = {
-  spectacles: '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="15" r="4"/><circle cx="18" cy="15" r="4"/><path d="M2 15a9.5 9.5 0 0 1 4-7.8"/><path d="M22 15a9.5 9.5 0 0 0-4-7.8"/><line x1="10" y1="15" x2="14" y2="15"/></svg>'
+  spectacles: '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="15" r="4"/><circle cx="18" cy="15" r="4"/><path d="M2 15a9.5 9.5 0 0 1 4-7.8"/><path d="M22 15a9.5 9.5 0 0 0-4-7.8"/><line x1="10" y1="15" x2="14" y2="15"/></svg>',
+  mobile: '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>'
 };
 
 function renderTags(tags) {
