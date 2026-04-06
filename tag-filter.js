@@ -16,9 +16,19 @@
     });
   }
 
-  function applyTag(tag) {
+  function applyTag(tag, anchorCard) {
+    var oldTop = anchorCard ? anchorCard.getBoundingClientRect().top : null;
+
     filterCards(tag);
     setActiveTag(tag);
+
+    if (anchorCard && oldTop !== null) {
+      // Reading getBoundingClientRect() forces a synchronous reflow so
+      // we get the post-filter layout. scrollTo then fires before any paint,
+      // meaning there is no visible jump — no rAF needed.
+      var cardAbsoluteTop = anchorCard.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo(0, cardAbsoluteTop - oldTop);
+    }
   }
 
   function init() {
@@ -27,8 +37,9 @@
       if (tagEl) {
         e.preventDefault();
         e.stopPropagation();
+        var card = tagEl.closest('.project-card');
         var isActive = tagEl.classList.contains('is-active');
-        applyTag(isActive ? null : (tagEl.getAttribute('data-tag') || null));
+        applyTag(isActive ? null : (tagEl.getAttribute('data-tag') || null), card);
       }
     }, true);
   }
