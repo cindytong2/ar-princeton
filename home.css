@@ -988,6 +988,7 @@
     padding-left: var(--dl-space-space-unit);
     padding-right: var(--dl-space-space-unit);
     padding-bottom: var(--dl-space-space-twounits);
+    min-height: unset;
   }
   .home-container1 {
     margin-bottom: var(--dl-space-space-unit);
