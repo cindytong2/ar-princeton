@@ -27,7 +27,7 @@
       // we get the post-filter layout. scrollTo then fires before any paint,
       // meaning there is no visible jump — no rAF needed.
       var cardAbsoluteTop = anchorCard.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo(0, cardAbsoluteTop - oldTop);
+      window.scrollTo({ top: cardAbsoluteTop - oldTop, behavior: 'instant' });
     }
   }
 
