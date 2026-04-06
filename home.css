@@ -854,6 +854,7 @@
   width: 100%;
   display: flex;
   padding: var(--dl-space-space-threeunits);
+  margin-bottom: var(--dl-space-space-sixunits);
   max-width: var(--dl-size-size-maxwidth);
   align-items: center;
   border-radius: var(--dl-radius-radius-radius8);

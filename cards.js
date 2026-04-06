@@ -195,7 +195,6 @@ function renderTags(tags) {
     return '<a href="' + escapeHtml(tag) + '" class="project-tag" data-tag="' + escapeHtml(tag) + '">'
       + icon
       + '<span>' + escapeHtml(tag) + '</span>'
-      + '<span class="project-tag-clear" aria-label="Clear filter">\u00d7</span>'
       + '</a>';
   }).join('');
 }
