@@ -16,16 +16,9 @@
     });
   }
 
-  function applyTag(tag, anchorCard) {
-    var cardTop = anchorCard ? anchorCard.getBoundingClientRect().top : null;
-
+  function applyTag(tag) {
     filterCards(tag);
     setActiveTag(tag);
-
-    if (anchorCard && cardTop !== null) {
-      var newCardTop = anchorCard.getBoundingClientRect().top;
-      window.scrollBy(0, newCardTop - cardTop);
-    }
   }
 
   function init() {
@@ -34,9 +27,8 @@
       if (tagEl) {
         e.preventDefault();
         e.stopPropagation();
-        var card = tagEl.closest('.project-card');
         var isActive = tagEl.classList.contains('is-active');
-        applyTag(isActive ? null : (tagEl.getAttribute('data-tag') || null), card);
+        applyTag(isActive ? null : (tagEl.getAttribute('data-tag') || null));
       }
     }, true);
   }
