@@ -58,7 +58,10 @@
     updateResetBar(tag);
   }
 
-  function applyTag(tag) {
+  function applyTag(tag, anchorCard) {
+    // Record the card's position relative to the viewport before filtering
+    var cardTop = anchorCard ? anchorCard.getBoundingClientRect().top : null;
+
     if (tag) {
       try {
         var base = getBasePath();
@@ -72,6 +75,12 @@
       } catch (err) {}
     }
     handleNavigation(tag);
+
+    // Restore the card to the same viewport position it was at before filtering
+    if (anchorCard && cardTop !== null) {
+      var newCardTop = anchorCard.getBoundingClientRect().top;
+      window.scrollBy(0, newCardTop - cardTop);
+    }
   }
 
   function init() {
@@ -83,14 +92,16 @@
       if (e.target.closest && e.target.closest('.project-tag-clear')) {
         e.preventDefault();
         e.stopPropagation();
-        applyTag(null);
+        var card = e.target.closest('.project-card');
+        applyTag(null, card);
         return;
       }
       var tagEl = e.target.closest && e.target.closest('.project-tag');
       if (tagEl) {
         e.preventDefault();
         e.stopPropagation();
-        applyTag(tagEl.getAttribute('data-tag') || null);
+        var card = tagEl.closest('.project-card');
+        applyTag(tagEl.getAttribute('data-tag') || null, card);
         return;
       }
     }, true); // capture: true
