@@ -1,4 +1,44 @@
 (function() {
+  var BASE_PATH = null;
+
+  // Collect all tag values from the rendered cards
+  function getKnownTags() {
+    var tags = [];
+    document.querySelectorAll('.project-tag').forEach(function(el) {
+      var tag = (el.getAttribute('data-tag') || '').toLowerCase();
+      if (tag && tags.indexOf(tag) === -1) tags.push(tag);
+    });
+    return tags;
+  }
+
+  // Derive the base path at init time by stripping any known tag from the end.
+  // Works regardless of repo name or hosting setup.
+  function computeBasePath(knownTags) {
+    var path = window.location.pathname
+      .replace(/\/$/, '')
+      .replace(/\/index\.html$/, '');
+    var segments = path.split('/').filter(Boolean);
+    if (segments.length > 0) {
+      var last = segments[segments.length - 1].toLowerCase();
+      if (knownTags.indexOf(last) !== -1) {
+        // Last segment is a tag — base is everything before it
+        return '/' + segments.slice(0, -1).join('/');
+      }
+    }
+    return path; // e.g. '/ar-princeton' or ''
+  }
+
+  function getTagFromPath() {
+    var path = window.location.pathname
+      .replace(/\/$/, '')
+      .replace(/\/index\.html$/, '');
+    if (path === BASE_PATH) return null;
+    if (path.indexOf(BASE_PATH + '/') === 0) {
+      return path.slice(BASE_PATH.length + 1).toLowerCase() || null;
+    }
+    return null;
+  }
+
   function filterCards(tag) {
     document.querySelectorAll('.project-card').forEach(function(card) {
       if (!tag) {
@@ -19,19 +59,28 @@
   function applyTag(tag, anchorCard) {
     var oldTop = anchorCard ? anchorCard.getBoundingClientRect().top : null;
 
+    try {
+      history.pushState(null, '', tag ? BASE_PATH + '/' + tag : BASE_PATH + '/');
+    } catch (err) {}
+
     filterCards(tag);
     setActiveTag(tag);
 
     if (anchorCard && oldTop !== null) {
-      // Reading getBoundingClientRect() forces a synchronous reflow so
-      // we get the post-filter layout. scrollTo then fires before any paint,
-      // meaning there is no visible jump — no rAF needed.
       var cardAbsoluteTop = anchorCard.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({ top: cardAbsoluteTop - oldTop, behavior: 'instant' });
     }
   }
 
   function init() {
+    var knownTags = getKnownTags();
+    BASE_PATH = computeBasePath(knownTags);
+
+    // Apply filter from URL on page load (e.g. user visits /ar-princeton/spectacles directly)
+    var initialTag = getTagFromPath();
+    filterCards(initialTag);
+    setActiveTag(initialTag);
+
     document.addEventListener('click', function(e) {
       var tagEl = e.target.closest && e.target.closest('.project-tag');
       if (tagEl) {
@@ -42,6 +91,12 @@
         applyTag(isActive ? null : (tagEl.getAttribute('data-tag') || null), card);
       }
     }, true);
+
+    window.addEventListener('popstate', function() {
+      var tag = getTagFromPath();
+      filterCards(tag);
+      setActiveTag(tag);
+    });
   }
 
   if (document.readyState === 'loading') {
