@@ -1,7 +1,6 @@
 (function() {
   var BASE_PATH = null;
 
-  // Collect all tag values from the rendered cards
   function getKnownTags() {
     var tags = [];
     document.querySelectorAll('.project-tag').forEach(function(el) {
@@ -11,8 +10,6 @@
     return tags;
   }
 
-  // Derive the base path at init time by stripping any known tag from the end.
-  // Works regardless of repo name or hosting setup.
   function computeBasePath(knownTags) {
     var path = window.location.pathname
       .replace(/\/$/, '')
@@ -21,11 +18,10 @@
     if (segments.length > 0) {
       var last = segments[segments.length - 1].toLowerCase();
       if (knownTags.indexOf(last) !== -1) {
-        // Last segment is a tag — base is everything before it
         return '/' + segments.slice(0, -1).join('/');
       }
     }
-    return path; // e.g. '/ar-princeton' or ''
+    return path;
   }
 
   function getTagFromPath() {
@@ -76,7 +72,6 @@
     var knownTags = getKnownTags();
     BASE_PATH = computeBasePath(knownTags);
 
-    // Apply filter from URL on page load (e.g. user visits /ar-princeton/spectacles directly)
     var initialTag = getTagFromPath();
     filterCards(initialTag);
     setActiveTag(initialTag);

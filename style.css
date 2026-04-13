@@ -157,7 +157,6 @@
   }
 }
 
-/* Project tag filtering styles */
 .project-tags {
   display: flex;
   flex-wrap: wrap;
@@ -188,7 +187,6 @@
   border-color: #ccc;
 }
 
-/* Toggled-on state when this tag is selected */
 .project-tag.is-active {
   background-color: #333;
   color: #fff;
@@ -200,23 +198,19 @@
   display: none;
 }
 
-/* Tag-specific colors — all muted/neutral, no per-tag hues */
 .project-tag[data-tag="social"],
 .project-tag[data-tag="education"],
 .project-tag[data-tag="programming"],
 .project-tag[data-tag="ar"],
 .project-tag[data-tag="collaboration"],
 .project-tag[data-tag="game"] {
-  /* intentionally unstyled — use base .project-tag styles */
 }
 
-/* Active filter bar — hidden, reset is now inline in the tag */
 .filter-reset-bar {
   display: none !important;
 }
 
 
-/* Hide spline-viewer loading animation */
 spline-viewer::part(loader),
 spline-viewer [class*="loader"],
 spline-viewer [class*="loading"] {
